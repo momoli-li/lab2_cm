@@ -720,6 +720,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPEN V0 V1 V2
 
 ![Secret 公开测试结果](images/secret_test.png)
 
+此外，使用公开测试列表之外的 seed `31415926` 对完整流程进行了验证。首先生成前六个正式阶段的口令，再生成 Honor 阶段的口令，并将结果依次传入同一 seed 对应的 `bomb` 程序。运行结果显示，Phase 1–6 均成功解除，随后出现 `Secret phase defused.`，表明正式六关与 Honor 在该 seed 下均通过。非公开 seed 的验证结果如图所示。
+
+![非公开 seed 下的完整流程与 Honor 验证结果](images/secret_nonpublic.png)
+
 ## 5. 测试设计与结果分析
 
 ### 5.1 严格编译检查
